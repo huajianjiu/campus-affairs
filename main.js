@@ -2,15 +2,22 @@ import App from './App'
 
 // #ifndef VUE3
 import Vue from 'vue'
-import store from './store'
-import uView from "@/uni_modules/uview-ui";
-Vue.use(uView);
+import uView from '@/uni_modules/uview-ui'
+import api from '@/api/index.js';
+// import config from './config/index.js'
 
-Vue.prototype.$store = store
-Vue.config.productionTip = false
+Vue.config.productionTip = false;
+Vue.prototype.api=api;
 App.mpType = 'app'
+Vue.use(uView);
+uni.$u.config.unit = 'rpx'
+
+// #ifdef MP
+// 引入uView对小程序分享的mixin封装
+const mpShare = require('@/uni_modules/uview-ui/libs/mixin/mpShare.js')
+Vue.mixin(mpShare)
+// #endif
 const app = new Vue({
-    store,
     ...App
 })
 app.$mount()

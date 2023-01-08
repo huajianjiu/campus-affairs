@@ -3,17 +3,36 @@
 		{
 			"path": "pages/index/index",
 			"style": {
-				"navigationBarTitleText": "uni-app"
+                "navigationStyle": "custom"
 			}
 		}
 	    ,{
             "path" : "pages/login/login",
             "style" :                                                                                    
             {
-                "navigationBarTitleText": "用户登录",
+                "navigationBarTitleText": "",
                 "enablePullDownRefresh": false,
-                "navigationBarTextStyle": "black",
-                "navigationBarBackgroundColor": "#fff"
+                "app-plus" :{
+                    "titleNView": {
+                        "backgroundColor":"transparent",
+                        "titleColor":"#000"
+                    }
+                }
+            }
+            
+        }
+        ,{
+            "path" : "pages/register/register",
+            "style" :                                                                                    
+            {
+                "navigationBarTitleText": "",
+                "enablePullDownRefresh": false,
+                "app-plus" :{
+                    "titleNView": {
+                        "backgroundColor":"transparent",
+                        "titleColor":"#000"
+                    }
+                }
             }
             
         }

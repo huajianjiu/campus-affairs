@@ -69,5 +69,22 @@
         "enable" : false
     },
     "vueVersion" : "2",
-    "locale" : "zh-Hans"
+    "locale" : "zh-Hans",
+    "h5" : {
+        "devServer" : {
+            "https" : false,
+            "proxy": {
+                  //配置跨域
+                  "/app": {
+                      "target": "http://m.huajianjiu.top"
+                  }
+            }
+        }
+    }
 }
+// ws:true,
+// changOrigin:true,
+// pathRewrite:{
+//     '^/app':'/'
+// }
+
